@@ -24,12 +24,10 @@ def read_json_with_comments(json_path):
     # fallback to json
     with open(json_path, "r") as f:
         input_str = f.read()
-    print(input_str)
     # handle comments
-    input_str = re.sub(r'\\\n', '', input_str)
-    input_str = re.sub(r'//.*\n', '\n', input_str)
-    print("hello")
-    print(input_str)
+    # quan comment 2 lines belows
+    # input_str = re.sub(r'\\\n', '', input_str)
+    # input_str = re.sub(r'//.*\n', '\n', input_str)
     data = json.loads(input_str)
     return data
 
